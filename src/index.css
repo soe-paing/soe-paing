@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Roboto:wght@300;500&display=swap');
+
+:root {
+  --primary: #003140;
+  --secondary: #131212;
+  --third: #FFFFFF;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1080px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--secondary);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,17 @@
+.logo>h3 {
+    font-weight: 800;
+}
+
+.logo>h3>span {
+    color: var(--primary);
+}
+
+.nav-link {
+    font-weight: bolder;
+}
+
+.navbg {
+    background: rgba(249, 249, 251, 0.09) !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,.1);
+    backdrop-filter: blur(28px) !important;
+}

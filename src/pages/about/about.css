@@ -1,0 +1,17 @@
+.about-section {
+    background-color: var(--primary);
+}
+
+.about-section .container {
+    margin-top: 90px;
+}
+
+.about-section img {
+    width: 78%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.about-section table tr {
+    height: 30px;
+}

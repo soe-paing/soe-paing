@@ -1,0 +1,26 @@
+.imgBg {
+    background-image: url(../../assests/img/portfolio-bg.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    height: 510px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.imgBg .container {
+    margin-top: 100px;
+}
+
+.imgBg .container img {
+    width: 100%;
+    aspect-ratio: 11/8.57;
+}
+
+@media (max-width: 1200px) {
+    .imgBg {
+        height: auto;
+        width: 100%;
+        aspect-ratio: 7/2.7;
+    }
+}
