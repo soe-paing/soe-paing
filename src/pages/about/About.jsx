@@ -14,13 +14,13 @@ export default function About() {
     ]
   return (
     <div className='about-section'>
-        <h3 className='text-light text-center'>About My Resume</h3>
-        <div className='container pb-5'>
-            <div className='row'>
-                <div className='col-6 d-flex align-items-center justify-content-center'>
+        <h2 className='text-light fw-bold text-center colorP'>About My Resume</h2>
+        <div className='container'>
+            <div className='d-flex justify-content-center row'>
+                <div className='col-12 col-sm-10 col-md-6 d-flex align-items-center justify-content-center'>
                     <img src={myImg}></img>
                 </div>
-                <div className='col-6 text-light'>
+                <div className='col-12 col-sm-10 col-md-6 text-light'>
                     <div>
                         <strong>A Front End Developer : </strong><span>with a passion for crafting seamless and visually appealing digital experiences. Armed with a keen eye for design and a love for clean, efficient code, I bring to life the creative visions of websites and applications.</span>
                     </div>
@@ -42,18 +42,22 @@ export default function About() {
                             <td>https://github.com/herry-jacker/</td>
                         </tr>
                         <tr>
-                            <td>Certificates : </td>
+                            <td>Certificates :</td>
                             <td>Professional Web Developer (fairway)</td>
                         </tr>
                         <tr>
-                            <td colSpan={2}>Other Experiences : </td>
+                            <td colSpan={2}>
+                                Other Experiences:
+                            </td>
                         </tr>
                         <tr>
+                            <td></td>
                             <td colSpan={2}>
-                                <ul>
-                                    <li>FO supervisor / assistant manager <br/> ( sagaing golden world hotel )</li>
-                                    <li>Web designer <br/> ( Vertical Solution Group )</li>
-                                </ul>
+                                <details>
+                                    <summary>Seemore</summary>
+                                    <li className='text-light'>FO supervisor / assistant manager <br/> ( sagaing golden world hotel )</li>
+                                    <li className='text-light'>Web designer <br/> ( Vertical Solution Group )</li>
+                                </details>
                             </td>
                         </tr>
                     </table>

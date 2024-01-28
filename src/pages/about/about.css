@@ -1,9 +1,10 @@
 .about-section {
     background-color: var(--primary);
+    padding: 40px 0;
 }
 
-.about-section .container {
-    margin-top: 90px;
+.about-section .container>.row>div {
+    margin-top: 60px;
 }
 
 .about-section img {
@@ -14,4 +15,8 @@
 
 .about-section table tr {
     height: 30px;
+}
+
+.about-section td:first-child, .about-section strong {
+    font-weight: bold;
 }

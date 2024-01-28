@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;800&family=Roboto:wght@400;500;700&display=swap');
 
 :root {
   --primary: #003140;
-  --secondary: #131212;
-  --third: #FFFFFF;
+  --themeBg: #131313;
+  --third: aqua;
+  --themeColor: #FFFFFF;
 }
 
 *{
@@ -19,7 +20,23 @@
 
 body {
   margin: 0;
-  background-color: var(--secondary);
+}
+
+.colorP {
+  color: var(--third) !important;
+}
+
+.mainBg {
+  background-color: var(--primary);
+}
+
+
+/* theme */
+.themeColor {
+  color: var(--themeColor) !important;
+}
+.themeBg {
+  background-color: var(--themeBg);
 }
 
 code {

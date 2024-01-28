@@ -17,6 +17,25 @@
     aspect-ratio: 11/8.57;
 }
 
+.HeroBtn {
+  font-weight: 600;
+  color: #131212;
+  background-color: var(--third) !important;
+  box-shadow: 0.3px 4px 3px var(--themeColor);
+  &:hover {
+    margin-bottom: -4px;
+    box-shadow: 0px 1px 2px var(--themeColor);
+    color: #131212;
+  }
+}
+
+@media (max-width: 600px) {
+    .desktop span {
+        font-size: 0.8rem;
+        line-height: 3px;
+    }
+}
+
 @media (max-width: 1200px) {
     .imgBg {
         height: auto;

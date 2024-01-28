@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './nav.css'
+import ThemeBtn from '../buttons/ThemeBtn';
 
 const FixNav = {
     position: "fixed",
@@ -25,10 +26,10 @@ export default function Nav() {
     <nav className="navbar transpNav p-0 pt-1 navbar-expand-sm w-100  mb-5" style={FixNav}>
         <div className='container' style={{maxWidth: 1200}}>
                 <a className="navbar-brand logo" href="#">
-                    <h3>SoePaing.<span>Dev</span></h3>
+                    <h3 className='colorP'>SoePaing.<span className='themeColor'>Dev</span></h3>
                 </a>
             <div className="navbar nav">
-                <li className="nav-item">
+                <li className="nav-item active">
                     {/* <Link className='text-decoration-none' to="/soe-paing/"> */}
                         <a className="nav-link" href="#">HOME</a>
                     {/* </Link> */}
@@ -43,6 +44,7 @@ export default function Nav() {
                         <a className="nav-link" href="#">CONTACT</a>
                     {/* </Link> */}
                 </li>
+                <ThemeBtn/>
             </div>
         </div>
     </nav>

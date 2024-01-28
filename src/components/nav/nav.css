@@ -2,16 +2,31 @@
     font-weight: 800;
 }
 
-.logo>h3>span {
-    color: var(--primary);
-}
-
 .nav-link {
     font-weight: bolder;
+}
+
+.nav a, .nav a>h3 {
+    color: var(--third);
 }
 
 .navbg {
     background: rgba(249, 249, 251, 0.09) !important;
     box-shadow: 0 6px 16px rgba(0,0,0,.1);
     backdrop-filter: blur(28px) !important;
+}
+
+.nav-item.active, .nav-item:hover {
+    &:after {
+        content: "";
+        display: block;
+        height: 3px;
+        border-radius: 5px;
+        background-color: var(--third);
+        margin: 0 3px;
+    }
+}
+
+.nav-item.active a, .nav-item a:hover {
+    color: var(--third);
 }
