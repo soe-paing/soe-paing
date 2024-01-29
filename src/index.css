@@ -7,6 +7,20 @@
   --themeColor: #FFFFFF;
 }
 
+/* theme */
+.themeColor {
+  color: var(--themeColor) !important;
+}
+.themeBg {
+  background-color: var(--themeBg);
+}
+
+[data-theme="dark"] {
+  --themeBg: #FFFFFF;
+  --themeColor: #131313;
+  --third: #00B2DF;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -30,16 +44,13 @@ body {
   background-color: var(--primary);
 }
 
-
-/* theme */
-.themeColor {
-  color: var(--themeColor) !important;
-}
-.themeBg {
-  background-color: var(--themeBg);
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.back-filter {
+  background: rgba(249, 249, 251, 0.09) !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,.1);
+  backdrop-filter: blur(28px) !important;
 }

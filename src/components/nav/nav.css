@@ -10,10 +10,16 @@
     color: var(--third);
 }
 
-.navbg {
-    background: rgba(249, 249, 251, 0.09) !important;
-    box-shadow: 0 6px 16px rgba(0,0,0,.1);
-    backdrop-filter: blur(28px) !important;
+.mobile-nav {
+    display: flex !important;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mobile-nav li {
+    display: block;
+    height: 60px;
 }
 
 .nav-item.active, .nav-item:hover {

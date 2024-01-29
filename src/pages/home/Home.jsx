@@ -2,6 +2,7 @@ import React from 'react';
 import './home.css';
 import codingImg from '../../assests/img/working.gif';
 import About from '../about/About';
+import Projects from '../projects/Projects';
 
 
 function Hero() {
@@ -23,28 +24,31 @@ function Hero() {
 export default function Home() {
   return (
     <>
-    <div className='imgBg'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-6 desktop d-none d-sm-flex themeColor d-flex align-items-center justify-content-center'>
-            <Hero/>
-          </div>
-          <div className='col-sm-6 col-12'>
-            <img src={codingImg}></img>
+    <div className='heroContainer'>
+      <div className='imgBg'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-6 desktop d-none d-sm-flex themeColor d-flex align-items-center justify-content-center'>
+              <Hero/>
+            </div>
+            <div className='col-sm-6 col-12'>
+              <img src={codingImg}></img>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div className='mainBg py-5'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-12 mobile text-center d-sm-none text-light d-flex align-items-center justify-content-center'>
-            <Hero/>
+      <div className='mainBg py-5 d-sm-none d-block'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-12 mobile text-center text-light d-flex align-items-center justify-content-center'>
+              <Hero/>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <About/>
+    <Projects/>
     </>
   )
 }

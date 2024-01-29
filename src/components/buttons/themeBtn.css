@@ -1,42 +1,53 @@
 .btn-container {
-    width: 60px;
-    height: 31px;
+    width: 50px;
+    height: 26px;
     margin-left: 10px;
-    background-color: #ffffff;
+    background-color: var(--themeBg);
     padding: 3px 5px;
     overflow: hidden;
     position: relative;
-    border: 1px solid var(--themeColor);
-    box-shadow: 1px 1px 3px rgb(0, 0, 0) inset;
+    border: 1px solid var(--third);
+    box-shadow: 1.5px 1.5px 3px var(--themeColor) inset;
 }
 
 .circle {
     position: absolute;
-    width: 25px;
-    aspect-ratio: 1/1;
-    background-color: yellow;
-    box-shadow: 1px 1px 2px black;
+    width: 20px;
     border-radius: 50%;
-    top: 2px;
-    animation-name: example;
-    animation-duration: 1s;
+    aspect-ratio: 1/1;
+    background-color: rgb(255, 251, 0);
+    box-shadow: 2px 2px 3px #fff inset;
+    animation-name: sun;
+    border: 1px rgba(0, 0, 0, 0.4) solid;
+    animation-duration: 0.5s;
+    top: 3px;
+    right: 25px;
 }
 
-.second {
+.fa-moon {
     position: absolute;
-    width: 25px;
     aspect-ratio: 1/1;
-    background-color: #ffffff;
-    border-radius: 50%;
-    top: 2px;
-    left: 39px;
+    font-size: 1.3rem;
+    color: #fff;
+    top: 3px;
+    animation-name: moon;
+    animation-duration: 0.5s;
+    left: 28px;
 }
 
-@keyframes example {
+@keyframes sun {
     0% {
-        right: 29px;
+        right: 3px;
     }
     100% {
-        right: 3px
+        right: 25px;
+    }
+}
+
+@keyframes moon {
+    0% {
+        left: 3px;
+    } 100% {
+        left: 28px;
     }
 }

@@ -1,20 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Nav from './components/nav/Nav';
-import Home from './pages/home/Home';
+import React, { createContext } from 'react';
+import Container from './Container';
+import useLocalStorage from 'use-local-storage';
+
+export const ThemeContext = createContext(null);
 
 export default function App() {
+  const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light');
+
+  const changeTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme)
+  }
   return (
-    <>
-    <Nav/>
-    <Router>
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/soe-paing/about' element={<Home/>}/>
-        <Route path='/soe-paing/' />
-        <Route path='/soe-paing/live'/>
-      </Routes>
-    </Router>
-    </>
+    <ThemeContext.Provider value={{ theme, changeTheme }}>
+      <div data-theme={theme}>
+        <Container/>
+      </div>
+    </ThemeContext.Provider>
   )
 }

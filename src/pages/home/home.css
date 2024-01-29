@@ -8,8 +8,8 @@
     width: 100%;
 }
 
-.imgBg .container {
-    margin-top: 100px;
+.heroContainer {
+    padding-top: 100px;
 }
 
 .imgBg .container img {
