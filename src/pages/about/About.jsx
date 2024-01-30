@@ -1,6 +1,8 @@
 import React from 'react';
 import './about.css';
 import myImg from '../../assests/img/my-img.jpg'
+import skills from '../../assests/img/skills.svg'
+import Skills from '../../components/svg/skills';
 
 export default function About() {
     const aboutMe = [
@@ -13,6 +15,7 @@ export default function About() {
         {title: "Other Experience", descrip: ["fO supervisor / assistant manager <br/> ( sagaing golden world hotel )", "web designer ( Vertical Solution Group )"]}
     ]
   return (
+    <>
     <div className='about-section'>
         <h2 className='text-light fw-bold text-center colorP'>About My Resume</h2>
         <div className='container'>
@@ -65,5 +68,11 @@ export default function About() {
             </div>
         </div>
     </div>
+    <div className='skills-section'>
+        <div className='container'>
+            <Skills/>
+        </div>
+    </div>
+    </>
   )
 }

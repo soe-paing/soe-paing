@@ -1,6 +1,7 @@
 .about-section {
     background-color: var(--primary);
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 40px;
 }
 
 .about-section .container>.row>div {
@@ -25,4 +26,17 @@
     .about-section .container>.row>div {
         margin-top: 30px;
     }
+}
+
+
+/* Skills */
+
+.skills-section {
+    position: relative;
+    width: 100%;
+    background-color: var(--primary);
+}
+
+.skills-section>.container {
+    max-width: 767px;
 }

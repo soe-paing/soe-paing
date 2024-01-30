@@ -1,0 +1,5 @@
+.svg-container div {
+    width: 100%;
+    aspect-ratio: 10/6;
+    text-align: center;
+}

@@ -3,6 +3,7 @@ import './home.css';
 import codingImg from '../../assests/img/working.gif';
 import About from '../about/About';
 import Projects from '../projects/Projects';
+import Btn from '../../components/buttons/Btn';
 
 
 function Hero() {
@@ -12,10 +13,10 @@ function Hero() {
       <h1 className='fw-bolder'>Soe Paing</h1>
       <h3 className='fw-bold colorP'>Front-End Developer</h3>
       <span className='d-block'>To create responsive User Interfaces,</span>
-      <span>a good condition in User Experiences!</span>
+      <span>with a good condition in User Experiences!</span>
       <div className='mt-4'>
-        <button className='btn HeroBtn btn-sm btn-primary rounded-pill'>Contact Me</button>
-        <button className='ms-2 btn HeroBtn btn-sm btn-primary rounded-pill'>Download CV</button>
+        <Btn text="Contact Me"/>
+        <Btn text="Download CV"/>
       </div>
     </div>
   )
