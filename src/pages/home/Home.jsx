@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import './home.css';
 import codingImg from '../../assests/img/working.gif';
-import About from '../about/About';
-import Projects from '../projects/Projects';
 import Btn from '../../components/buttons/Btn';
+import useIntersectionObserver from '../../customHook/useInterSectionObserver';
+import { ActiveContext } from '../../Container';
 
 
 function Hero() {
@@ -22,10 +22,21 @@ function Hero() {
   )
 }
 
-export default function Home() {
+export default function Home({id}) {
+  const {activeItem, setActiveItem} = useContext(ActiveContext);
+  const targetRef = useIntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        yourFunction(id);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  const yourFunction = (id) => {
+    setActiveItem(id);
+  };
   return (
-    <>
-    <div className='heroContainer'>
+    <div ref={targetRef} className='heroContainer' id='home'>
       <div className='imgBg'>
         <div className='container'>
           <div className='row'>
@@ -48,8 +59,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-    <About/>
-    <Projects/>
-    </>
   )
 }

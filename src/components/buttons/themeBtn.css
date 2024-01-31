@@ -20,8 +20,8 @@
     animation-name: sun;
     border: 1px rgba(0, 0, 0, 0.4) solid;
     animation-duration: 0.5s;
-    top: 3px;
-    right: 25px;
+    top: 3.5px;
+    left: 4px;
 }
 
 .fa-moon {
@@ -32,22 +32,22 @@
     top: 3px;
     animation-name: moon;
     animation-duration: 0.5s;
-    left: 28px;
+    right: 4.5px;
 }
 
 @keyframes sun {
     0% {
-        right: 3px;
+        left: 25px;
     }
     100% {
-        right: 25px;
+        left: 4px;
     }
 }
 
 @keyframes moon {
     0% {
-        left: 3px;
+        right: 28px;
     } 100% {
-        left: 28px;
+        right: 4.5px;
     }
 }

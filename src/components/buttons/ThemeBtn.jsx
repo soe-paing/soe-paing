@@ -6,7 +6,7 @@ import { ThemeContext } from '../../App';
 export default function ThemeBtn() {
   const value = useContext(ThemeContext);
   return (
-    <div onClick={value.changeTheme} className='btn-container rounded-pill'>
+    <div onClick={value.changeTheme} className='btn-container ms-0 ms-md-2 rounded-pill'>
       {
         value.theme === "dark" ? (
           <div className='fa circle'></div>

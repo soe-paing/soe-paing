@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './projects.css';
 import projectI1 from '../../assests/img/project1.png';
 import projectI2 from '../../assests/img/project2.png';
 import projectI3 from '../../assests/img/project3.png';
 import Btn from '../../components/buttons/Btn';
+import useIntersectionObserver from '../../customHook/useInterSectionObserver';
+import { ActiveContext } from '../../Container';
 
-export default function Projects() {
+export default function Projects({id}) {
+    const {activeItem, setActiveItem} = useContext(ActiveContext);
+    const targetRef = useIntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          yourFunction(id);
+        }
+      });
+    }, { threshold: 0.5 });
+  
+    const yourFunction = (id) => {
+      setActiveItem(id);
+    };
 
     const projects = [
         {
@@ -47,7 +61,7 @@ export default function Projects() {
     ]
 
   return (
-    <div className='projects-section'>
+    <div ref={targetRef} className='projects-section' id='projects'>
         <h2 className='text-light fw-bold text-center colorP'>My Projects</h2>
         <div className='container'>
             <div className='row justify-content-between'>
