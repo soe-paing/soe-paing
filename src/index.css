@@ -2,9 +2,9 @@
 
 :root {
   --primary: #003140;
-  --themeBg: #131313;
-  --third: aqua;
-  --themeColor: #FFFFFF;
+  --themeBg: #FFFFFF;
+  --themeColor: #131313;
+  --third: #00B2DF;
 }
 
 /* theme */
@@ -15,10 +15,10 @@
   background-color: var(--themeBg);
 }
 
-[data-theme="dark"] {
-  --themeBg: #FFFFFF;
-  --themeColor: #131313;
-  --third: #00B2DF;
+[data-theme="light"] {
+  --themeBg: #131313;
+  --third: aqua;
+  --themeColor: #FFFFFF;
 }
 
 *{
@@ -41,7 +41,7 @@ body {
 }
 
 .mainBg {
-  background-color: var(--primary);
+  background-color: var(--primary) !important;
 }
 
 code {

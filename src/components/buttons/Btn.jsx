@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Button = styled.button`
+export const Button = styled.button`
     font-weight: 600;
     color: var(--themeBg);
-    background-color: var(--third) !important;
+    background-color: var(--third);
     box-shadow: 0.3px 2px 3px var(--themeColor);
     &:hover {
       background-color: hsla(192, 91%, 46%, 0.366) !important;

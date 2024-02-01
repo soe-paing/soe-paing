@@ -27,14 +27,10 @@ export default function Home({id}) {
   const targetRef = useIntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        yourFunction(id);
+        setActiveItem(id);
       }
     });
   }, { threshold: 0.5 });
-
-  const yourFunction = (id) => {
-    setActiveItem(id);
-  };
   return (
     <div ref={targetRef} className='heroContainer' id='home'>
       <div className='imgBg'>

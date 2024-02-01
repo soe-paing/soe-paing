@@ -12,14 +12,10 @@ export default function Projects({id}) {
     const targetRef = useIntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          yourFunction(id);
+          setActiveItem(id);
         }
       });
     }, { threshold: 0.5 });
-  
-    const yourFunction = (id) => {
-      setActiveItem(id);
-    };
 
     const projects = [
         {
@@ -62,7 +58,7 @@ export default function Projects({id}) {
 
   return (
     <div ref={targetRef} className='projects-section' id='projects'>
-        <h2 className='text-light fw-bold text-center colorP'>My Projects</h2>
+        <h2 className='fw-bold text-center colorP'>My Projects</h2>
         <div className='container'>
             <div className='row justify-content-between'>
                 {

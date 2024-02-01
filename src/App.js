@@ -5,7 +5,7 @@ import useLocalStorage from 'use-local-storage';
 export const ThemeContext = createContext(null);
 
 export default function App() {
-  const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light');
+  const [theme, setTheme] = useLocalStorage('theme' ? 'light' : 'dark');
 
   const changeTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';

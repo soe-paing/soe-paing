@@ -1,0 +1,41 @@
+.contact-section .container {
+    max-width: 800px;
+    padding-top: 100px;
+    color: var(--themeColor);
+    margin-bottom: 70px;
+}
+
+.contact-section .container .contactInfo a {
+    text-decoration: none;
+    color: var(--themeColor);
+}
+
+.contact-section .container .contactInfo li {
+    list-style: none;
+    margin: 10px;
+    cursor: pointer;
+    a:hover {
+        color: var(--third);
+    }
+}
+
+@media (max-width: 767px) and (min-width: 400px) {
+    .contact-section .container {
+        max-width: 490px;
+        .contactInfo {
+            h4 {
+                display: none;
+            }
+            li {
+                display: inline;
+            }
+            div {
+                float: inline-end;
+                max-width: 380px;
+            }
+        }
+        .contactForm {
+            margin-top: 20px;
+        }
+    }
+}

@@ -8,10 +8,10 @@ export default function ThemeBtn() {
   return (
     <div onClick={value.changeTheme} className='btn-container ms-0 ms-md-2 rounded-pill'>
       {
-        value.theme === "dark" ? (
-          <div className='fa circle'></div>
-        ) : (
+        value.theme === "light" ? (
           <div className='fa fa-moon'></div>
+          ) : (
+          <div className='fa circle'></div>
         )
       }
     </div>

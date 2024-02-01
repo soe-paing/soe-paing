@@ -10,14 +10,10 @@ export default function About({id}) {
     const targetRef = useIntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          yourFunction(id);
+          setActiveItem(id);
         }
       });
     }, { threshold: 0.5 });
-  
-    const yourFunction = (id) => {
-      setActiveItem(id)
-    };
 
     const aboutMe = [
         {title: "A Front End Developer : ", descrip: "with a passion for crafting seamless and visually appealing digital experiences. Armed with a keen eye for design and a love for clean, efficient code, I bring to life the creative visions of websites and applications."},
