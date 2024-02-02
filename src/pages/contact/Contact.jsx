@@ -6,7 +6,7 @@ import { Button } from '../../components/buttons/Btn';
 import emailjs from 'emailjs-com';
 import { RingLoader } from 'react-spinners';
 
-const ContactForm = () => {
+const ContactForm = ({setVisible}) => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -14,7 +14,14 @@ const ContactForm = () => {
 
     emailjs.sendForm('service_msk9dxy', 'template_g3cbj9k', form.current, 'kOnBGFKi2qkd4RYgZ')
       .then(() => {
-          form.current.reset();
+        form.current.reset();
+        setVisible(true);
+        const removeVisible = setTimeout(() => {
+          setVisible(false);
+        }, 4000);
+        return () => {
+          clearTimeout(timeoutId);
+        };
       }, (error) => {
           console.log(error.text);
       });
@@ -50,7 +57,6 @@ const ContactForm = () => {
           className="form-control"
           id="subject"
           name="user_subject"
-          required
           placeholder='Subject'
         />
       </div>
@@ -71,6 +77,7 @@ const ContactForm = () => {
 };
 
 export default function Contact({id}) {
+  const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(true);
 
   const {activeItem, setActiveItem} = useContext(ActiveContext);
@@ -113,10 +120,10 @@ export default function Contact({id}) {
       <div className='container'>
         <div>
           <h2 className='fw-bold colorP'>Contact Me <span className='fs-6'>any time.</span></h2>
+          <div className={ visible ? "d-block alert alert-success" : "d-none alert alert-success"} role="alert">
+            Message have been sent!
+          </div>
           <span>I will get back to you as soon as I can.</span>
-          {/* <div class="alert alert-success" role="alert">
-            A simple success alert—check it out!
-          </div> */}
         </div>
         <div className='row'>
           <div className='col-12 col-md-5 mt-4 contactInfo'>
@@ -135,7 +142,7 @@ export default function Contact({id}) {
           </div>
           <div className='col-12 mt-4 col-md-7 contactForm'>
             <h4>Contact Form</h4>
-            <ContactForm/>
+            <ContactForm setVisible={setVisible}/>
           </div>
         </div>
       </div>

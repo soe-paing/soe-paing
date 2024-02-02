@@ -13,9 +13,9 @@ const FixNav = {
 const NavItems = () => {
     const {activeItem, setActiveItem} = useContext(ActiveContext);
     const navigate = useNavigate();
-    const toProj = () => navigate('./#projects');
-    const toAbout = () => navigate('./#about');
-    const toHome = _ => navigate('./#home');
+    const toProj = () => navigate('./soe-paing/#projects');
+    const toAbout = () => navigate('./soe-paing/#about');
+    const toHome = _ => navigate('./soe-paing/#home');
     return (
         <>
             <li className={activeItem === 'home' ? 'nav-item active' : 'nav-item'}>
@@ -28,7 +28,7 @@ const NavItems = () => {
                 <a className="nav-link" href="./soe-paing/#projects" onClick={toProj}>PROJECTS</a>
             </li>
             <li className={activeItem === 'contact' ? 'nav-item active' : 'nav-item'}>
-                <Link className='text-decoration-none' to="./soe-paing/contact" >
+                <Link className='text-decoration-none' to="../soe-paing/contact" >
                     <a className="nav-link" href="#">CONTACT</a>
                 </Link>
             </li>
