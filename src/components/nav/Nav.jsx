@@ -19,16 +19,16 @@ const NavItems = () => {
     return (
         <>
             <li className={activeItem === 'home' ? 'nav-item active' : 'nav-item'}>
-                <a className="nav-link" href="./#home" onClick={toHome}>HOME</a>
+                <a className="nav-link" href="./soe-paing/#home" onClick={toHome}>HOME</a>
             </li>
             <li className={activeItem === 'about' ? 'nav-item active' : 'nav-item'}>
-                <a className="nav-link" href="./#about" onClick={toAbout}>ABOUT</a>
+                <a className="nav-link" href="./soe-paing/#about" onClick={toAbout}>ABOUT</a>
             </li>
             <li className={activeItem === 'projects' ? 'nav-item active' : 'nav-item'}>
-                <a className="nav-link" href="./#projects" onClick={toProj}>PROJECTS</a>
+                <a className="nav-link" href="./soe-paing/#projects" onClick={toProj}>PROJECTS</a>
             </li>
             <li className={activeItem === 'contact' ? 'nav-item active' : 'nav-item'}>
-                <Link className='text-decoration-none' to="/contact" >
+                <Link className='text-decoration-none' to="./soe-paing/contact" >
                     <a className="nav-link" href="#">CONTACT</a>
                 </Link>
             </li>

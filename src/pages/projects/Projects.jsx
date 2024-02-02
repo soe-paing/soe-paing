@@ -2,17 +2,20 @@ import React, { useContext } from 'react';
 import './projects.css';
 import projectI1 from '../../assests/img/project1.png';
 import projectI2 from '../../assests/img/project2.png';
-import projectI3 from '../../assests/img/project3.png';
+import projectI3 from '../../assests/img/project3.gif';
 import Btn from '../../components/buttons/Btn';
 import useIntersectionObserver from '../../customHook/useInterSectionObserver';
 import { ActiveContext } from '../../Container';
+import { LoadingContext } from '../main';
 
 export default function Projects({id}) {
+    const {loading, setLoading} = useContext(LoadingContext);
     const {activeItem, setActiveItem} = useContext(ActiveContext);
     const targetRef = useIntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setActiveItem(id);
+          setLoading(false)
         }
       });
     }, { threshold: 0.5 });

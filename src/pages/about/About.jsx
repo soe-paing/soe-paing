@@ -4,13 +4,16 @@ import myImg from '../../assests/img/my-img.jpg'
 import Skills from '../../components/svg/skills';
 import useIntersectionObserver from '../../customHook/useInterSectionObserver';
 import { ActiveContext } from '../../Container';
+import { LoadingContext } from '../main';
 
 export default function About({id}) {
+    const {loading, setLoading} = useContext(LoadingContext);
     const {activeItem, setActiveItem} = useContext(ActiveContext);
     const targetRef = useIntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setActiveItem(id);
+          setLoading(false);
         }
       });
     }, { threshold: 0.5 });

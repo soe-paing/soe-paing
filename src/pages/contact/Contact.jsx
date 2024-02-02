@@ -4,6 +4,7 @@ import { ActiveContext } from '../../Container';
 import './contact.css';
 import { Button } from '../../components/buttons/Btn';
 import emailjs from 'emailjs-com';
+import { RingLoader } from 'react-spinners';
 
 const ContactForm = () => {
   const form = useRef();
@@ -70,12 +71,14 @@ const ContactForm = () => {
 };
 
 export default function Contact({id}) {
+  const [loading, setLoading] = useState(true);
 
   const {activeItem, setActiveItem} = useContext(ActiveContext);
   const targetRef = useIntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         setActiveItem(id);
+        setLoading(false)
       }
     });
   }, { threshold: 0.5 });
@@ -104,6 +107,8 @@ export default function Contact({id}) {
   ]
 
   return (
+    <>
+    <RingLoader color={'var(--third)'} className='position-fixed top-50 start-50 translate-middle' loading={loading} size={80} />
     <div ref={targetRef} className='contact-section'>
       <div className='container'>
         <div>
@@ -135,5 +140,6 @@ export default function Contact({id}) {
         </div>
       </div>
     </div>
+    </>
   )
 }

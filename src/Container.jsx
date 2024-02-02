@@ -16,8 +16,8 @@ export default function Container() {
         <Router>
           <Nav />
           <Routes>
-            <Route path='/' element={<Main />} />
-            <Route path='/contact' element={<Contact id="contact" />} />
+            <Route path='/soe-paing/' element={<Main />} />
+            <Route path='/soe-paing/contact' element={<Contact id="contact" />} />
           </Routes>
           <Footer />
         </Router>

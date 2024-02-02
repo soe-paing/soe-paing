@@ -1,9 +1,11 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import './home.css';
 import codingImg from '../../assests/img/working.gif';
 import Btn from '../../components/buttons/Btn';
 import useIntersectionObserver from '../../customHook/useInterSectionObserver';
 import { ActiveContext } from '../../Container';
+import { RingLoader } from 'react-spinners';
+import { LoadingContext } from '../main';
 
 
 function Hero() {
@@ -23,15 +25,19 @@ function Hero() {
 }
 
 export default function Home({id}) {
+  const {loading, setLoading} = useContext(LoadingContext);
   const {activeItem, setActiveItem} = useContext(ActiveContext);
   const targetRef = useIntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         setActiveItem(id);
+        setLoading(false);
       }
     });
   }, { threshold: 0.5 });
   return (
+    <>
+    <RingLoader color={'var(--third)'} className='position-fixed top-50 start-50 translate-middle' loading={loading} size={80} />
     <div ref={targetRef} className='heroContainer' id='home'>
       <div className='imgBg'>
         <div className='container'>
@@ -55,5 +61,6 @@ export default function Home({id}) {
         </div>
       </div>
     </div>
+    </>
   )
 }
