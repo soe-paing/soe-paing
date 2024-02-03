@@ -131,7 +131,7 @@ export default function Contact({id}) {
               <div>
                 {
                   contactInfo.map( info => (
-                    <li>
+                    <li key={info.index}>
                       <a href={info.link}>
                         <i className={info.icon + " colorP"}></i> <span> {info.info}</span>
                       </a>

@@ -10,7 +10,7 @@ const FixNav = {
     zIndex: 1200,
 }
 
-const NavItems = () => {
+const NavItems = ({modal}) => {
     const {activeItem, setActiveItem} = useContext(ActiveContext);
     const navigate = useNavigate();
     const toProj = () => navigate('../soe-paing/#projects');
@@ -19,17 +19,17 @@ const NavItems = () => {
     return (
         <>
             <li className={activeItem === 'home' ? 'nav-item active' : 'nav-item'}>
-                <a className="nav-link" href="../soe-paing/#home" onClick={toHome}>HOME</a>
+                <a className="nav-link" data-bs-dismiss={modal} href="../soe-paing/#home" onClick={toHome}>HOME</a>
             </li>
             <li className={activeItem === 'about' ? 'nav-item active' : 'nav-item'}>
-                <a className="nav-link" href="../soe-paing/#about" onClick={toAbout}>ABOUT</a>
+                <a className="nav-link" data-bs-dismiss={modal} href="../soe-paing/#about" onClick={toAbout}>ABOUT</a>
             </li>
             <li className={activeItem === 'projects' ? 'nav-item active' : 'nav-item'}>
-                <a className="nav-link" href="../soe-paing/#projects" onClick={toProj}>PROJECTS</a>
+                <a className="nav-link" data-bs-dismiss={modal} href="../soe-paing/#projects" onClick={toProj}>PROJECTS</a>
             </li>
             <li className={activeItem === 'contact' ? 'nav-item active' : 'nav-item'}>
                 <Link className='text-decoration-none' to="../soe-paing/contact" >
-                    <a className="nav-link" href="#">CONTACT</a>
+                    <a className="nav-link" data-bs-dismiss={modal} href="#">CONTACT</a>
                 </Link>
             </li>
         </>
@@ -46,7 +46,7 @@ const Modal = () => {
                     <i type="button" className="fas fa-xmark fs-3" data-bs-dismiss="modal" aria-label="Close"></i>
                 </div>
                 <div className="modal-body mobile-nav text-center height-100 navbar d-block nav">
-                    <NavItems/>
+                    <NavItems modal="modal"/>
                 </div>
             </div>
         </div>

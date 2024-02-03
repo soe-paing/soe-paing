@@ -6,7 +6,9 @@ import useIntersectionObserver from '../../customHook/useInterSectionObserver';
 import { ActiveContext } from '../../Container';
 import { RingLoader } from 'react-spinners';
 import { LoadingContext } from '../main';
+import { Link } from 'react-router-dom';
 
+const MyCV = './Soe_Paing_CV.pdf';
 
 function Hero() {
   return (
@@ -17,8 +19,8 @@ function Hero() {
       <span className='d-block'>To create responsive User Interfaces,</span>
       <span>with a good condition in User Experiences!</span>
       <div className='mt-4'>
-        <Btn text="Contact Me"/>
-        <Btn text="Download CV"/>
+        <Link to="../soe-paing/contact"><Btn text="Contact Me"/></Link>
+        <a href={MyCV} download={MyCV}><Btn text="Download CV"/></a>
       </div>
     </div>
   )
