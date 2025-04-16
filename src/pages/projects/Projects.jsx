@@ -30,8 +30,8 @@ export default function Projects({id}) {
                 {language: "html", percent: "4.1%"},
                 {language: "CSS", percent: "1.9%"},
             ],
-            view: "https://herry-jacker.github.io/international-space-station/",
-            source: "https://github.com/Herry-Jacker/international-space-station"
+            view: "https://soe-paing.github.io/international-space-station/",
+            source: "https://github.com/soe-paing/international-space-station"
         },
         {
             img: projectI1,
@@ -42,8 +42,8 @@ export default function Projects({id}) {
                 {language: "JS", percent: "34.4%"},
                 {language: "CSS", percent: "9.7%"},
             ],
-            view: "https://herry-jacker.github.io/SKYLIST/",
-            source: "https://github.com/Herry-Jacker/SKYLIST"
+            view: "https://soe-paing.github.io/SKYLIST/",
+            source: "https://github.com/soe-paing/SKYLIST"
         },
         {
             img: projectI2,
@@ -54,8 +54,8 @@ export default function Projects({id}) {
                 {language: "CSS", percent: "9.3%"},
                 {language: "html", percent: "4.8%"},
             ],
-            view: "https://herry-jacker.github.io/Skytype/",
-            source: "https://github.com/Herry-Jacker/Skytype"
+            view: "https://soe-paing.github.io/Skytype/",
+            source: "https://github.com/soe-paing/Skytype"
         }
     ]
 
